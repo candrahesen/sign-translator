@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_isyarat_editor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Silahkan merekam gerakan Bahasa Isyarat untuk menerjemahkan"
+                    android:textSize="14sp"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_isyarat_editor"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="captureVideo"
+                    >
+
+                    <FrameLayout
+                        android:background="@drawable/card_edge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/view_edge">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_editor_isyarat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="36dp">
+
+                            <ImageView
+                                android:id="@+id/iv_videocam"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_marginTop="-24dp"
+                                android:src="@drawable/ic_videocam"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/tv_take_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-10dp"
+                                android:layout_below="@id/iv_videocam"
+                                android:layout_centerHorizontal="true"
+                                android:text="Take a Video !"
+                                android:textSize="18sp"/>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_indo_editor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_indo_editor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    >
+
+                    <FrameLayout
+                        android:background="@drawable/card_edge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/view_edge"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/ll_teks_voice_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginRight="16dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_suara_icon_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:onClick="recordAudio">
+
+                                <TextView
+                                    android:id="@+id/tv_suara"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="Ketuk untuk merekam"
+                                    android:textColor="#757575"
+                                    android:layout_marginRight="8dp"
+                                    android:textSize="12sp"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_voice"
+                                    android:layout_toRightOf="@id/tv_suara"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_voice_record"/>
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/v_separator_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:background="@drawable/dash_line"
+                            android:layerType="software"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_editor_indo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_teks_editor"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                >
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <EditText
+                                        android:id="@+id/et_teks_editor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Ketuk untuk memasukkan teks"
+                                        android:inputType="textMultiLine"
+                                        android:isScrollContainer="true"
+                                        android:focusable="true"
+                                        android:enabled="true"
+                                        android:lineSpacingExtra="1.5pt"
+                                        android:scrollbars="vertical"
+                                        android:maxLines="50"
+                                        android:textColor="#000000"
+                                        android:textCursorDrawable="@drawable/edit_text_cursor"
+                                        app:backgroundTint="#00FFFFFF"
+                                        android:textSize="18sp" />
+                                </ScrollView>
+
+                                <Button
+                                    android:id="@+id/bt_done_teks"
+                                    android:layout_width="70dp"
+                                    android:layout_height="40dp"
+                                    android:text="DONE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:background="@color/colorPrimary"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
