@@ -1,6 +1,7 @@
 package com.example.deaftranslator;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,14 +14,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.util.ArrayList;
+
 public class IndoTranslatorTextActivity extends AppCompatActivity {
 
     private TextView tvWordToTranslateText;
+
+    private LinearLayout llTextTerjemahanContainer;
 
     private VideoView videoResultSignTranslate;
     private VideoView videoResultKataSignTranslate;
     private VideoView videoResultKata2;
     private VideoView videoResultKata3;
+    private VideoView videoResultPlayList;
 
     private RelativeLayout videoTerjemahanTeksContainer;
     private RelativeLayout videoTerjemahanKataContainer;
@@ -33,28 +39,33 @@ public class IndoTranslatorTextActivity extends AppCompatActivity {
     MediaController mediaControllerKata;
     MediaController mediaControllerKata2;
     MediaController mediaControllerKata3;
+    MediaController mediaControllerPlayList;
+
+    private int url = 0;
+    private ArrayList<String> videoList = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indo_translator_text);
 
+        llTextTerjemahanContainer = (LinearLayout) findViewById(R.id.ll_text_terjemahan_teks_container);
+
         videoTerjemahanTeksContainer = (RelativeLayout) findViewById(R.id.ll_video_terjemahan_teks_container);
         tvWordToTranslateText = (TextView) findViewById(R.id.tv_word_to_translate_teks);
 
-        videoTerjemahanKataContainer = (RelativeLayout) findViewById(R.id.rl_video_terjemahan_kata_container);
+//        videoTerjemahanKataContainer = (RelativeLayout) findViewById(R.id.rl_video_terjemahan_kata_container);
 
-        teksGerakan = (TextView) findViewById(R.id.tv_hasil_terjemahan_gerakan_teks);
-        deskripsiTeksGerakan = (LinearLayout) findViewById(R.id.ll_deskripsi_gerakan_teks_container);
 
         mediaController = new MediaController(this);
         mediaControllerKata = new MediaController(this);
         mediaControllerKata2 = new MediaController(this);
         mediaControllerKata3 = new MediaController(this);
+        mediaControllerPlayList = new MediaController(this);
 
         String wordToTranslateText = (String) (getIntent().getExtras().getSerializable("teksTerjemahan"));
         tvWordToTranslateText.setText(wordToTranslateText);
-        tvWordToTranslateText.isFocusable();
 
         videoResultSignTranslate = (VideoView) findViewById(R.id.vv_result_sign_translate_teks);
         String path = "android.resource://" + getPackageName() + "/" + R.raw.dimana_kumpul2;
@@ -71,6 +82,14 @@ public class IndoTranslatorTextActivity extends AppCompatActivity {
         videoResultKata3 = (VideoView) findViewById(R.id.vv_terjemahan_kata3);
         String pathKata3 = "android.resource://" + getPackageName() + "/" + R.raw.kumpul;
         videoResultKata3.setVideoURI(Uri.parse(pathKata3));
+
+        videoList.add("android.resource://" + getPackageName() + "/" + R.raw.dimana);
+        videoList.add("android.resource://" + getPackageName() + "/" + R.raw.tugas);
+        videoList.add("android.resource://" + getPackageName() + "/" + R.raw.kumpul);
+
+        videoResultPlayList = (VideoView) findViewById(R.id.vv_result_sign_translate_video_playlist);
+
+
 
 //        fullScreen = (Button) findViewById(R.id.bt_fullscreen);
 //        fullScreen.setOnClickListener(fullScreenListener);
@@ -90,6 +109,33 @@ public class IndoTranslatorTextActivity extends AppCompatActivity {
         mediaControllerKata3.setAnchorView(videoResultKata3);
         videoResultKata3.setMediaController(mediaControllerKata3);
         videoResultKata3.start();
+
+        String pathPlayList = videoList.get(0);
+        videoResultPlayList.setVideoURI(Uri.parse(pathPlayList));
+        videoResultPlayList.start();
+
+        //Video Loop
+        videoResultPlayList.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                String pathPlayList = videoList.get(url);
+                videoResultPlayList.setVideoURI(Uri.parse(pathPlayList));
+                videoResultPlayList.start();
+
+                if(url==videoList.size()-1)
+                {
+                    url=0;
+                }
+                else{
+                    url++;
+                }
+
+            }
+        });
+
+
+//        mediaControllerPlayList.setAnchorView(videoResultPlayList);
+//        videoResultPlayList.setMediaController(mediaControllerPlayList);
+//        videoResultPlayList.start();
     }
 
 

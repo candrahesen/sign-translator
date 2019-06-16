@@ -162,13 +162,13 @@ public class MainActivity extends AppCompatActivity {
         Intent speechInput = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         speechInput.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         speechInput.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "id-ID");
-        speechInput.putExtra(RecognizerIntent.EXTRA_PROMPT, "Say something!");
+        speechInput.putExtra(RecognizerIntent.EXTRA_PROMPT, "Katakan sesuatu!");
 
         try {
             startActivityForResult(speechInput, 100);
         }
         catch (ActivityNotFoundException a) {
-            Toast.makeText(MainActivity.this, "Sorry! your device doesn't support speech language!", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Maaf! perangkat Anda tidak mendukung bahasa ucapan!", Toast.LENGTH_LONG).show();
         }
     }
 

@@ -1,225 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/cl_terjemahan_teks_container"
-    android:layout_marginTop="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
     tools:context=".IndoTranslatorTextActivity">
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/cl_terjemahan_teks_container"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:orientation="vertical"-->
+        <!--tools:context=".IndoTranslatorTextActivity">-->
 
 
-        <RelativeLayout
-            android:id="@+id/rl_indo_terjemahan_teks_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp">
 
-            <!--<include-->
-            <!--android:id="@+id/toolbar"-->
-            <!--layout="@layout/view_toolbar" />-->
-
-            <TextView
-                android:id="@+id/tv_teks_tobe_translate_teks"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Teks yang Diterjemahkan"
-                android:textSize="16sp"/>
-
-            <LinearLayout
-                android:id="@+id/ll_text_terjemahan_teks_container"
-                android:layout_width="match_parent"
-                android:layout_marginTop="4dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_teks_tobe_translate_teks"
-                android:background="@color/colorPrimary">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:layout_below="@+id/toolbar"
-                    android:background="#FFFFFF">
-
-                    <TextView
-                        android:id="@+id/tv_word_to_translate_teks"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Aku cinta kamu"
-                        android:textSize="16sp"
-                        android:textColor="#000000"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_hasil_terjemahan_sign"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/ll_text_terjemahan_teks_container"
-                android:text="Hasil Terjemahan"
-                android:textSize="16sp"/>
 
             <RelativeLayout
-                android:id="@+id/ll_video_terjemahan_teks_container"
+                android:id="@+id/rl_indo_terjemahan_teks_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="#000000"
-                android:layout_below="@id/tv_hasil_terjemahan_sign">
+                android:layout_margin="16dp">
 
-                <VideoView
-                    android:id="@+id/vv_result_sign_translate_teks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="230dp"
-                    android:layout_centerHorizontal="true"/>
-                <!--<Button-->
-                    <!--android:id="@+id/bt_fullscreen"-->
+                <!--<include-->
+                <!--android:id="@+id/toolbar"-->
+                <!--layout="@layout/view_toolbar" />-->
+
+                <TextView
+                    android:id="@+id/tv_teks_tobe_translate_teks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Teks yang Diterjemahkan"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_text_terjemahan_teks_container"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_teks_tobe_translate_teks"
+                    android:background="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_below="@+id/toolbar"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/tv_word_to_translate_teks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Aku cinta kamu"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_hasil_terjemahan_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ll_text_terjemahan_teks_container"
+                    android:text="Hasil Terjemahan"
+                    android:textSize="16sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/ll_video_terjemahan_teks_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#000000"
+                    android:layout_below="@id/tv_hasil_terjemahan_sign">
+
+                    <VideoView
+                        android:id="@+id/vv_result_sign_translate_teks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="230dp"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone"/>
+                    <!--<Button-->
+                        <!--android:id="@+id/bt_fullscreen"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:visibility="visible"-->
+                        <!--android:text="Fullscreen" />-->
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_video_terjemahan_kata_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#FFFFFF"
+                    android:layout_below="@id/ll_video_terjemahan_teks_container">
+
+                    <LinearLayout
+                        android:id="@+id/ll_kata1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <VideoView
+                                android:id="@+id/vv_terjemahan_kata"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:layout_centerHorizontal="true"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dimana"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="left"/>
+
+                        <TextView
+                            android:id="@+id/tv_deskripsi_gerakan_teks1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="Mengeluarkan jari telunjuk dari tangan kanan kemudian menggerakkan ke kanan dan ke kiri jari telunjuk tersebut"
+                            android:textSize="14sp"
+                            android:textColor="#757575"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_kata2"
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@id/ll_kata1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <VideoView
+                                android:id="@+id/vv_terjemahan_kata2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:layout_centerHorizontal="true"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tugas"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="left"/>
+
+                        <TextView
+                            android:id="@+id/tv_deskripsi_gerakan_teks2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mengerucutkan keduan tangan kemudian mempertemukan kedua tangan tersebut dan memutarnya berlawanan arah"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:textSize="14sp"
+                            android:textColor="#757575"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_kata3"
+                        android:layout_below="@id/ll_kata2"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <VideoView
+                                android:id="@+id/vv_terjemahan_kata3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:layout_centerHorizontal="true"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kumpul"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="left"/>
+
+                        <TextView
+                            android:id="@+id/tv_deskripsi_gerakan_teks3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Merentangkan tangan selebar bahu dan mengarahkan telapak tangan menghadap ke atas, kemudian mengayunkan kedua tangan maju ke depan"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:textSize="14sp"
+                            android:textColor="#757575"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_hasil_terjemahan_playlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/rl_video_terjemahan_kata_container"
+                    android:text="Putar Semua"
+                    android:textSize="16sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_video_terjemahan_playlist_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#000000"
+                    android:layout_below="@id/tv_hasil_terjemahan_playlist">
+
+                    <VideoView
+                        android:id="@+id/vv_result_sign_translate_video_playlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="230dp"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_hasil_terjemahan_gerakan_teks"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
-                    <!--android:visibility="visible"-->
-                    <!--android:text="Fullscreen" />-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_below="@id/rl_video_terjemahan_playlist_container"-->
+                    <!--android:text="Gerakan"-->
+                    <!--android:textSize="16sp"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_deskripsi_gerakan_teks_container"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="4dp"-->
+                    <!--android:layout_below="@id/tv_hasil_terjemahan_gerakan_teks"-->
+                    <!--android:background="@color/colorPrimary">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="2dp"-->
+                        <!--android:background="#FFFFFF">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_deskripsi_gerakan_teks"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_margin="8dp"-->
+                            <!--android:text="Mengepalkan kedua tangan dan mengeluarkan jari telunjuk dari kepalan tangan. Kemudian menyatukan kedua kepan tersebut dan diputar berlawanan arah. Selanjutnya merentangkan tangan kedepan."-->
+                            <!--android:textSize="16sp"-->
+                            <!--android:lineSpacingExtra="1.5dp"-->
+                            <!--android:textColor="#000000"/>-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/rl_video_terjemahan_playlist_container"/>
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/rl_video_terjemahan_kata_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="#FFFFFF"
-                android:layout_below="@id/ll_video_terjemahan_teks_container">
 
-                <LinearLayout
-                    android:id="@+id/ll_kata1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="#FFFFFF">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <VideoView
-                            android:id="@+id/vv_terjemahan_kata"
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_centerHorizontal="true"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Dimana"
-                        android:textSize="16sp"
-                        android:layout_gravity="center_horizontal|center_vertical"/>
-                </LinearLayout>
+    <!--</LinearLayout>-->
+</ScrollView>
 
-                <LinearLayout
-                    android:id="@+id/ll_kata2"
-                    android:layout_marginTop="6dp"
-                    android:layout_below="@id/ll_kata1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="#FFFFFF">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <VideoView
-                            android:id="@+id/vv_terjemahan_kata2"
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_centerHorizontal="true"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Tugas"
-                        android:textSize="16sp"
-                        android:layout_gravity="center_horizontal|center_vertical"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_kata3"
-                    android:layout_below="@id/ll_kata2"
-                    android:layout_marginTop="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="#FFFFFF">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <VideoView
-                            android:id="@+id/vv_terjemahan_kata3"
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_centerHorizontal="true"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Kumpul"
-                        android:textSize="16sp"
-                        android:layout_gravity="center_horizontal|center_vertical"/>
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/tv_hasil_terjemahan_gerakan_teks"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/rl_video_terjemahan_kata_container"
-                android:text="Gerakan"
-                android:textSize="16sp"/>
-
-            <LinearLayout
-                android:id="@+id/ll_deskripsi_gerakan_teks_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_below="@id/tv_hasil_terjemahan_gerakan_teks"
-                android:background="@color/colorPrimary">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:background="#FFFFFF">
-
-                    <TextView
-                        android:id="@+id/tv_deskripsi_gerakan_teks"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:text="Mengepalkan kedua tangan dan mengeluarkan jari telunjuk dari kepalan tangan. Kemudian menyatukan kedua kepan tersebut dan diputar berlawanan arah. Selanjutnya merentangkan tangan kedepan."
-                        android:textSize="16sp"
-                        android:lineSpacingExtra="1.5dp"
-                        android:textColor="#000000"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@id/ll_deskripsi_gerakan_teks_container"/>
-
-        </RelativeLayout>
-
-    </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
 

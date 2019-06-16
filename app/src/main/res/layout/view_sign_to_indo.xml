@@ -22,72 +22,144 @@
             android:orientation="vertical"
             app:cardCornerRadius="4dp">
 
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_language_translate_container"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingTop="16dp"-->
+                <!--android:paddingBottom="16dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_sign_container"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--android:layout_marginRight="16dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_sign_language"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Isyarat"-->
+                        <!--android:textColor="#757575"-->
+                        <!--android:textSize="18sp"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_switcher_container"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--android:layout_marginRight="16dp">-->
+
+                    <!--<View-->
+                        <!--android:id="@+id/v_separator"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="4dp"-->
+                        <!--android:layout_toLeftOf="@+id/iv_switch"-->
+                        <!--android:background="@drawable/dash_separator"-->
+                        <!--android:layerType="software"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_switch"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:clickable="true"-->
+                        <!--android:background="@drawable/circle"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:src="@drawable/ic_switch"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_indonesia_container"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--android:layout_marginRight="16dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_indo_language"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Indonesia"-->
+                        <!--android:textColor="#757575"-->
+                        <!--android:textSize="18sp"/>-->
+
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
             <LinearLayout
                 android:id="@+id/ll_language_translate_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <RelativeLayout
                     android:id="@+id/rl_sign_container"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
                     android:layout_marginRight="16dp">
 
                     <TextView
                         android:id="@+id/tv_sign_language"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Isyarat"
-                        android:textColor="#000000"
+                        android:textColor="#757575"
                         android:textSize="18sp"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/rl_switcher_container"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
                     android:layout_marginRight="16dp">
-
-                    <View
-                        android:id="@+id/v_separator"
-                        android:layout_width="wrap_content"
-                        android:layout_height="2dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="4dp"
-                        android:layout_toLeftOf="@+id/iv_switch"
-                        android:background="@drawable/dash_separator"
-                        android:layerType="software"/>
 
                     <ImageView
                         android:id="@+id/iv_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:rotation="90"
                         android:clickable="true"
-                        android:layout_alignParentRight="true"
                         android:src="@drawable/ic_switch"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/rl_indonesia_container"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
                     android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
                     android:layout_marginRight="16dp">
 
                     <TextView
                         android:id="@+id/tv_indo_language"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Indonesia"
-                        android:textColor="#000000"
+                        android:textColor="#757575"
                         android:textSize="18sp"/>
 
                 </RelativeLayout>

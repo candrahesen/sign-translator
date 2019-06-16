@@ -186,9 +186,9 @@
 
                                 <Button
                                     android:id="@+id/bt_done_teks"
-                                    android:layout_width="70dp"
+                                    android:layout_width="80dp"
                                     android:layout_height="40dp"
-                                    android:text="DONE"
+                                    android:text="SELESAI"
                                     android:textColor="#FFFFFF"
                                     android:textSize="12sp"
                                     android:background="@color/colorPrimary"
